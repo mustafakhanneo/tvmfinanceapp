@@ -4,6 +4,13 @@ import iformula from "../assets/icons/iformula.png";
 import iabout from "../assets/icons/iabout.png";
 import rarrow from "../assets/icons/rarrow.png";
 import darrow from "../assets/icons/darrow.png";
+import youtube from "../assets/icons/youtube.png";
+import facebook from "../assets/icons/facebook.png";
+import linkedin from "../assets/icons/linkedin.png";
+import github from "../assets/icons/github.png";
+import x from "../assets/icons/x.png";
+import instagram from "../assets/icons/instagram.png";
+
 
 
 
@@ -13,5 +20,11 @@ export default {
   ihome,
   iabout,
   rarrow,
-  darrow
+  darrow,
+  youtube,
+  facebook,
+  instagram,
+  linkedin,
+github,
+x
 };

@@ -1,3 +1,5 @@
 import icons from "./icons";
+import equate from "./equate";
 
-export { icons };
+
+export { icons, equate };

@@ -427,6 +427,16 @@ const home = () => {
   return (
     <SafeAreaView className="bg-[#1D232A] h-full pt-2 pr-2 pl-2">
       <ScrollView className="flex flex-col space-y-4">
+
+      <View className="flex flex-col justify-start pb-4 mt-5 items-start">
+        <Text className="text-md font-bold text-[#A6ADBB]">Instructions</Text>
+        <Text className="text-[#A6ADBB]">
+          Just enter known values and left the unknown value empty and Click
+          Calculate.
+        </Text>
+      </View>
+
+
         {/*Simple Present Future Value 1*/}
         
           <View className="flex bg-[#191E24] rounded h-auto p-4">
@@ -434,7 +444,7 @@ const home = () => {
           onPress={() => setIsCollapsed(!isCollapsed)}
         >
             <View className="flex flex-row justify-between">
-              <Text className=" text-[#A6ADBB]">Simple Present Future Value</Text>
+              <Text className=" text-[#A6ADBB] font-bold">Simple Present Future Value</Text>
               <Image
                 source={!isCollapsed ? icons.darrow : icons.rarrow}
                 resizeMode="contain"
@@ -492,7 +502,7 @@ const home = () => {
           onPress={() => setIsCollapsed2(!isCollapsed2)}
         >
             <View className="flex flex-row justify-between">
-              <Text className=" text-[#A6ADBB]">future Value Of Ordinary Annuity</Text>
+              <Text className=" text-[#A6ADBB] font-bold">Future Value Of Ordinary Annuity</Text>
               <Image
                 source={!isCollapsed2 ? icons.darrow : icons.rarrow}
                 resizeMode="contain"
@@ -550,7 +560,7 @@ const home = () => {
           onPress={() => setIsCollapsed3(!isCollapsed3)}
         >
             <View className="flex flex-row justify-between">
-              <Text className=" text-[#A6ADBB]">Present Value Of Ordinary Annuity</Text>
+              <Text className=" text-[#A6ADBB] font-bold">Present Value Of Ordinary Annuity</Text>
               <Image
                 source={!isCollapsed3 ? icons.darrow : icons.rarrow}
                 resizeMode="contain"
@@ -608,7 +618,7 @@ const home = () => {
           onPress={() => setIsCollapsed4(!isCollapsed4)}
         >
             <View className="flex flex-row justify-between">
-              <Text className=" text-[#A6ADBB]">future Value Of Annuity Due</Text>
+              <Text className=" text-[#A6ADBB] font-bold">future Value Of Annuity Due</Text>
               <Image
                 source={!isCollapsed4 ? icons.darrow : icons.rarrow}
                 resizeMode="contain"
@@ -666,7 +676,7 @@ const home = () => {
           onPress={() => setIsCollapsed5(!isCollapsed5)}
         >
             <View className="flex flex-row justify-between">
-              <Text className=" text-[#A6ADBB]">Present Value Of Annuity Due</Text>
+              <Text className=" text-[#A6ADBB] font-bold">Present Value Of Annuity Due</Text>
               <Image
                 source={!isCollapsed5 ? icons.darrow : icons.rarrow}
                 resizeMode="contain"
@@ -724,7 +734,7 @@ const home = () => {
           onPress={() => setIsCollapsed6(!isCollapsed6)}
         >
             <View className="flex flex-row justify-between">
-              <Text className=" text-[#A6ADBB]">Present Value Of Growing Annuity</Text>
+              <Text className=" text-[#A6ADBB] font-bold">Present Value Of Growing Annuity</Text>
               <Image
                 source={!isCollapsed6 ? icons.darrow : icons.rarrow}
                 resizeMode="contain"
@@ -790,7 +800,7 @@ const home = () => {
           onPress={() => setIsCollapsed7(!isCollapsed7)}
         >
             <View className="flex flex-row justify-between">
-              <Text className=" text-[#A6ADBB]">Effective Annual Rate</Text>
+              <Text className=" text-[#A6ADBB] font-bold">Effective Annual Rate</Text>
               <Image
                 source={!isCollapsed7 ? icons.darrow : icons.rarrow}
                 resizeMode="contain"
@@ -841,7 +851,7 @@ const home = () => {
           onPress={() => setIsCollapsed8(!isCollapsed8)}
         >
             <View className="flex flex-row justify-between">
-              <Text className=" text-[#A6ADBB]">Prepetual Investment Return</Text>
+              <Text className=" text-[#A6ADBB] font-bold">Prepetual Investment Return</Text>
               <Image
                 source={!isCollapsed8 ? icons.darrow : icons.rarrow}
                 resizeMode="contain"
@@ -892,7 +902,7 @@ const home = () => {
           onPress={() => setIsCollapsed9(!isCollapsed9)}
         >
             <View className="flex flex-row justify-between">
-              <Text className=" text-[#A6ADBB]">Growing Prepetual Investment Return</Text>
+              <Text className=" text-[#A6ADBB] font-bold">Growing Prepetual Investment Return</Text>
               <Image
                 source={!isCollapsed9 ? icons.darrow : icons.rarrow}
                 resizeMode="contain"
@@ -950,7 +960,7 @@ const home = () => {
           onPress={() => setIsCollapsed10(!isCollapsed10)}
         >
             <View className="flex flex-row justify-between">
-              <Text className=" text-[#A6ADBB]">Bond Value</Text>
+              <Text className=" text-[#A6ADBB] font-bold">Bond Value</Text>
               <Image
                 source={!isCollapsed10 ? icons.darrow : icons.rarrow}
                 resizeMode="contain"

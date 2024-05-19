@@ -3,7 +3,7 @@ import * as NavigationBar from 'expo-navigation-bar';
 
 
 const RootLayout = () => {
-
+    
     NavigationBar.setBackgroundColorAsync("black");
     return (
         <Stack>

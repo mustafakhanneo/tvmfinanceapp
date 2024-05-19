@@ -13,16 +13,16 @@ import { icons } from "../../constants";
 
 const home = () => {
 
-  const [isCollapsed, setIsCollapsed] = useState(false);
-  const [isCollapsed2, setIsCollapsed2] = useState(false);
-  const [isCollapsed3, setIsCollapsed3] = useState(false);
-  const [isCollapsed4, setIsCollapsed4] = useState(false);
-  const [isCollapsed5, setIsCollapsed5] = useState(false);
-  const [isCollapsed6, setIsCollapsed6] = useState(false);
-  const [isCollapsed7, setIsCollapsed7] = useState(false);
-  const [isCollapsed8, setIsCollapsed8] = useState(false);
-  const [isCollapsed9, setIsCollapsed9] = useState(false);
-  const [isCollapsed10, setIsCollapsed10] = useState(false);
+  const [isCollapsed, setIsCollapsed] = useState(true);
+  const [isCollapsed2, setIsCollapsed2] = useState(true);
+  const [isCollapsed3, setIsCollapsed3] = useState(true);
+  const [isCollapsed4, setIsCollapsed4] = useState(true);
+  const [isCollapsed5, setIsCollapsed5] = useState(true);
+  const [isCollapsed6, setIsCollapsed6] = useState(true);
+  const [isCollapsed7, setIsCollapsed7] = useState(true);
+  const [isCollapsed8, setIsCollapsed8] = useState(true);
+  const [isCollapsed9, setIsCollapsed9] = useState(true);
+  const [isCollapsed10, setIsCollapsed10] = useState(true);
 
   const [pvalue, setPvalue] = useState("");
   const [fvalue, setFvalue] = useState("");

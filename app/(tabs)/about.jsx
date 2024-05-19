@@ -18,7 +18,7 @@ const about = () => {
       <ScrollView>
       <View className="flex flex-col p-2 mt-4 space-y-4">
       <View className="flex flex-col justify-start space-y-2">
-        <Text className="font-medium text-[#A6ADBB] font-tanker text-2xl mb-2">
+        <Text className="font-medium text-[#A6ADBB] font-tanker text-2xl mb-1">
           Developer Profile
         </Text>
         <Text className="font-medium text-lg text-[#A6ADBB] font-archivo">

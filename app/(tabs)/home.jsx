@@ -436,7 +436,7 @@ const home = () => {
         </Text>
       </View>
 
-
+    
         {/*Simple Present Future Value 1*/}
         
           <View className="flex bg-[#191E24] rounded h-auto p-4">

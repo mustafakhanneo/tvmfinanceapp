@@ -10,14 +10,37 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import React from 'react';
 import { icons } from "../../constants";
 import { StatusBar } from 'expo-status-bar';
-
+import * as Updates from 'expo-updates';
 
 const about = () => {
+
+  async function onFetchUpdateAsync() {
+    try {
+      const update = await Updates.checkForUpdateAsync();
+
+      if (update.isAvailable) {
+        await Updates.fetchUpdateAsync();
+        await Updates.reloadAsync();
+      }
+    } catch (error) {
+      // You can also add an alert() to see the error message in case of an error when fetching updates.
+      alert(`Error fetching latest Expo update: ${error}`);
+    }
+  }
+
+
   return (
     <SafeAreaView className="bg-[#1D232A] h-full">
       <ScrollView>
       <View className="flex flex-col p-2 mt-4 space-y-4">
       <View className="flex flex-col justify-start space-y-2">
+      <TouchableOpacity
+          className="flex flex-row justify-center rounded items-center w-auto border border-[#383F47] pt-2 pb-2"
+          onPress={onFetchUpdateAsync}
+        >
+          
+          <Text className=" text-[#A6ADBB]">Check for updates</Text>
+        </TouchableOpacity>
         <Text className="font-medium text-[#A6ADBB] font-tanker text-2xl mb-1">
           Developer Profile
         </Text>

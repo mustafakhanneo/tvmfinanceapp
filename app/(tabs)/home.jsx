@@ -426,7 +426,7 @@ const home = () => {
 
   return (
     <SafeAreaView className="bg-[#1D232A] h-full pt-2 pr-2 pl-2">
-      <ScrollView className="flex flex-col space-y-4">
+      <ScrollView showsVerticalScrollIndicator={false} className="flex flex-col space-y-4">
 
       <View className="flex flex-col justify-start pb-4 mt-5 items-start">
         <Text className="text-md font-bold text-[#A6ADBB]">Instructions</Text>
@@ -439,7 +439,7 @@ const home = () => {
     
         {/*Simple Present Future Value 1*/}
         
-          <View className="flex bg-[#191E24] rounded h-auto p-4">
+          <View className="flex bg-[#191E24] rounded-lg h-auto p-4">
           <TouchableOpacity
           onPress={() => setIsCollapsed(!isCollapsed)}
         >
@@ -452,7 +452,8 @@ const home = () => {
               />
             </View>
             </TouchableOpacity>
-            <View className={`flex flex-col space-y-2 ${isCollapsed ? "hidden" : ""}`}>
+            {!isCollapsed && ( 
+            <View className={"flex flex-col space-y-2"}>
               <TextInput
                 className="border border-[#383F47] text-[#A6ADBB] mt-4 rounded py-1 px-2"
                 placeholder="Present Value"
@@ -492,12 +493,13 @@ const home = () => {
                 <Text className=" text-[#A6ADBB]">{`${answersimp || "Answer"}`}</Text>
               </View>
             </View>
+             )}
           </View>
   
       
       {/*Future Value of ordinary Annuity 2*/}
       
-          <View className="flex bg-[#191E24] rounded h-auto p-4">
+          <View className="flex bg-[#191E24] rounded-lg h-auto p-4">
           <TouchableOpacity
           onPress={() => setIsCollapsed2(!isCollapsed2)}
         >
@@ -510,7 +512,8 @@ const home = () => {
               />
             </View>
             </TouchableOpacity>
-            <View className={`flex flex-col space-y-2 ${isCollapsed2 ? "hidden" : ""}`}>
+            {!isCollapsed2 && ( 
+            <View className={"flex flex-col space-y-2"}>
               <TextInput
                 className="border border-[#383F47] text-[#A6ADBB] mt-4 rounded py-1 px-2"
                 placeholder="Future Value"
@@ -549,13 +552,13 @@ const home = () => {
               <View className="flex justify-center rounded items-center w-auto border border-[#383F47] pt-2 pb-2">
                 <Text className=" text-[#A6ADBB]">{`${answerOrdinaryFuture || "Answer"}`}</Text>
               </View>
-            </View>
+            </View> )}
           </View>
 
 
         {/*Present Value of ordinary Annuity 3*/}
       
-          <View className="flex bg-[#191E24] rounded h-auto p-4">
+          <View className="flex bg-[#191E24] rounded-lg h-auto p-4">
           <TouchableOpacity
           onPress={() => setIsCollapsed3(!isCollapsed3)}
         >
@@ -568,7 +571,8 @@ const home = () => {
               />
             </View>
             </TouchableOpacity>
-            <View className={`flex flex-col space-y-2 ${isCollapsed3 ? "hidden" : ""}`}>
+            {!isCollapsed3 && ( 
+            <View className={"flex flex-col space-y-2 "}>
               <TextInput
                 className="border border-[#383F47] text-[#A6ADBB] mt-4 rounded py-1 px-2"
                 placeholder="Present Value"
@@ -607,13 +611,13 @@ const home = () => {
               <View className="flex justify-center rounded items-center w-auto border border-[#383F47] pt-2 pb-2">
                 <Text className=" text-[#A6ADBB]">{`${answerOrdinaryPresent || "Answer"}`}</Text>
               </View>
-            </View>
+            </View>)}
           </View>
         
 
               {/*Future Value of Annuity DUe4*/}
       
-          <View className="flex bg-[#191E24] rounded h-auto p-4">
+          <View className="flex bg-[#191E24] rounded-lg h-auto p-4">
           <TouchableOpacity
           onPress={() => setIsCollapsed4(!isCollapsed4)}
         >
@@ -626,7 +630,8 @@ const home = () => {
               />
             </View>
             </TouchableOpacity>
-            <View className={`flex flex-col space-y-2 ${isCollapsed4 ? "hidden" : ""}`}>
+            {!isCollapsed4 && ( 
+            <View className={"flex flex-col space-y-2 "}>
               <TextInput
                 className="border border-[#383F47] text-[#A6ADBB] mt-4 rounded py-1 px-2"
                 placeholder="Future Value"
@@ -665,13 +670,13 @@ const home = () => {
               <View className="flex justify-center rounded items-center w-auto border border-[#383F47] pt-2 pb-2">
                 <Text className=" text-[#A6ADBB]">{`${answerDueFuture || "Answer"}`}</Text>
               </View>
-            </View>
+            </View>)}
           </View>
        
 
         {/*Present Value of Annuity Due5*/}
       
-          <View className="flex bg-[#191E24] rounded h-auto p-4">
+          <View className="flex bg-[#191E24] rounded-lg h-auto p-4">
           <TouchableOpacity
           onPress={() => setIsCollapsed5(!isCollapsed5)}
         >
@@ -684,7 +689,8 @@ const home = () => {
               />
             </View>
             </TouchableOpacity>
-            <View className={`flex flex-col space-y-2 ${isCollapsed5 ? "hidden" : ""}`}>
+            {!isCollapsed5 && ( 
+            <View className={"flex flex-col space-y-2 "}>
               <TextInput
                 className="border border-[#383F47] text-[#A6ADBB] mt-4 rounded py-1 px-2"
                 placeholder="Present Value"
@@ -723,13 +729,13 @@ const home = () => {
               <View className="flex justify-center rounded items-center w-auto border border-[#383F47] pt-2 pb-2">
                 <Text className=" text-[#A6ADBB]">{`${answerDuePresent || "Answer"}`}</Text>
               </View>
-            </View>
+            </View>)}
           </View>
         
 
          {/*Present Value of Growing Annuity6*/}
       
-          <View className="flex bg-[#191E24] rounded h-auto p-4">
+          <View className="flex bg-[#191E24] rounded-lg h-auto p-4">
           <TouchableOpacity
           onPress={() => setIsCollapsed6(!isCollapsed6)}
         >
@@ -742,7 +748,8 @@ const home = () => {
               />
             </View>
             </TouchableOpacity>
-            <View className={`flex flex-col space-y-2 ${isCollapsed6 ? "hidden" : ""}`}>
+            {!isCollapsed6 && ( 
+            <View className={"flex flex-col space-y-2 "}>
               <TextInput
                 className="border border-[#383F47] text-[#A6ADBB] mt-4 rounded py-1 px-2"
                 placeholder="Present Value"
@@ -789,13 +796,13 @@ const home = () => {
               <View className="flex justify-center rounded items-center w-auto border border-[#383F47] pt-2 pb-2">
                 <Text className=" text-[#A6ADBB]">{`${answerGAnnu || "Answer"}`}</Text>
               </View>
-            </View>
+            </View>)}
           </View>
         
 
         {/*Effective Annual Rate 7*/}
         
-          <View className="flex bg-[#191E24] rounded h-auto p-4">
+          <View className="flex bg-[#191E24] rounded-lg h-auto p-4">
           <TouchableOpacity
           onPress={() => setIsCollapsed7(!isCollapsed7)}
         >
@@ -808,7 +815,8 @@ const home = () => {
               />
             </View>
             </TouchableOpacity>
-            <View className={`flex flex-col space-y-2 ${isCollapsed7 ? "hidden" : ""}`}>
+            {!isCollapsed7 && ( 
+            <View className={"flex flex-col space-y-2 "}>
               <TextInput
                 className="border border-[#383F47] text-[#A6ADBB] mt-4 rounded py-1 px-2"
                 placeholder="Effective Rate in %"
@@ -840,13 +848,13 @@ const home = () => {
               <View className="flex justify-center rounded items-center w-auto border border-[#383F47] pt-2 pb-2">
                 <Text className=" text-[#A6ADBB]">{`${answerEAR || "Answer"}`}</Text>
               </View>
-            </View>
+            </View>)}
           </View>
         
 
          {/*Prep int return 8*/}
          
-          <View className="flex bg-[#191E24] rounded h-auto p-4">
+          <View className="flex bg-[#191E24] rounded-lg h-auto p-4">
           <TouchableOpacity
           onPress={() => setIsCollapsed8(!isCollapsed8)}
         >
@@ -859,7 +867,8 @@ const home = () => {
               />
             </View>
             </TouchableOpacity>
-            <View className={`flex flex-col space-y-2 ${isCollapsed8 ? "hidden" : ""}`}>
+            {!isCollapsed8 && ( 
+            <View className={"flex flex-col space-y-2 "}>
               <TextInput
                 className="border border-[#383F47] text-[#A6ADBB] mt-4 rounded py-1 px-2"
                 placeholder="Present Value"
@@ -892,12 +901,13 @@ const home = () => {
                 <Text className=" text-[#A6ADBB]">{`${answerPrepsimp || "Answer"}`}</Text>
               </View>
             </View>
+            )}
           </View>
         
 
         {/*GrowingPrep int return 9*/}
         
-          <View className="flex bg-[#191E24] rounded h-auto p-4">
+          <View className="flex bg-[#191E24] rounded-lg h-auto p-4">
           <TouchableOpacity
           onPress={() => setIsCollapsed9(!isCollapsed9)}
         >
@@ -910,7 +920,8 @@ const home = () => {
               />
             </View>
             </TouchableOpacity>
-            <View className={`flex flex-col space-y-2 ${isCollapsed9 ? "hidden" : ""}`}>
+            {!isCollapsed9 && ( 
+            <View className={"flex flex-col space-y-2 "}>
               <TextInput
                 className="border border-[#383F47] text-[#A6ADBB] mt-4 rounded py-1 px-2"
                 placeholder="Present Value"
@@ -949,13 +960,13 @@ const home = () => {
               <View className="flex justify-center rounded items-center w-auto border border-[#383F47] pt-2 pb-2">
                 <Text className=" text-[#A6ADBB]">{`${answerGPrepsimp || "Answer"}`}</Text>
               </View>
-            </View>
+            </View>)}
           </View>
         
 
                  {/*Bond Value 10 */}
       
-          <View className="flex p-4 bg-[#191E24] rounded h-auto">
+          <View className="flex p-4 bg-[#191E24] rounded-lg h-auto">
           <TouchableOpacity
           onPress={() => setIsCollapsed10(!isCollapsed10)}
         >
@@ -968,7 +979,8 @@ const home = () => {
               />
             </View>
             </TouchableOpacity>
-            <View className={`flex flex-col space-y-2 ${isCollapsed10 ? "hidden" : ""}`}>
+            {!isCollapsed10 && ( 
+            <View className={"flex flex-col space-y-2 "}>
               <TextInput
                 className="border border-[#383F47] text-[#A6ADBB] mt-4 rounded py-1 px-2"
                 placeholder="Bond Value"
@@ -1015,7 +1027,7 @@ const home = () => {
               <View className="flex justify-center rounded items-center w-auto border border-[#383F47] pt-2 pb-2">
                 <Text className=" text-[#A6ADBB]">{`${answerBondValue || "Answer"}`}</Text>
               </View>
-            </View>
+            </View>)}
           </View>
         
 

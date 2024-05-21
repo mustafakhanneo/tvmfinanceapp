@@ -19,7 +19,7 @@ const formulas = () => {
   
   return (
     <SafeAreaView className="bg-[#1D232A] h-full">
-      <ScrollView className="flex flex-col px-2 space-y-4">
+      <ScrollView showsVerticalScrollIndicator={false} className="flex flex-col px-2 space-y-4" >
       <View className="flex flex-col justify-start pb-4 mt-5 items-start">
         <Text className="text-md font-bold text-[#A6ADBB]">Formulas</Text>
         <Text className="text-[#A6ADBB]">
@@ -28,7 +28,7 @@ const formulas = () => {
         </View>
         {/*Simple Present Future Value 1*/}
         
-        <View className="flex bg-[#191E24] rounded mt-1 h-auto w-full p-4">
+        <View className="flex bg-[#191E24] rounded-lg mt-1 h-auto w-full p-4">
           <TouchableOpacity onPress={() => setIsCollapsed(!isCollapsed)}>
             <View className="flex flex-row justify-between">
               <Text className=" text-[#A6ADBB] font-bold">Simple Present Future Value</Text>
@@ -39,21 +39,23 @@ const formulas = () => {
               />
             </View>
             </TouchableOpacity>
-            <View className={`flex justify-center items-center mt-4 mb-2 ${isCollapsed ? "hidden" : ""}`}>
+            {!isCollapsed && ( 
+              <View>
+            <View className="flex justify-center items-center mt-4 mb-2 ">
              <Image className="h-4 w-1/2" source={equate.simple} />
             </View>
-            <View className={`${isCollapsed ? "hidden" : ""}`}>
+            <View className="">
             <Text className=" text-[#A6ADBB]">Where:</Text>
               <Text className=" text-[#A6ADBB]">PV = Present Value</Text>
               <Text className=" text-[#A6ADBB]">FV = Future Value</Text>
               <Text className=" text-[#A6ADBB]">i =  Interest Rate</Text>
               <Text className=" text-[#A6ADBB]">n = Period</Text>
-            </View>
+            </View></View>)}
           </View>
 
           {/*Future Value of Ordinary Annuity 2*/}
         
-        <View className="flex bg-[#191E24] rounded mt-1 h-auto w-full p-4">
+        <View className="flex bg-[#191E24] rounded-lg mt-1 h-auto w-full p-4">
           <TouchableOpacity onPress={() => setIsCollapsed2(!isCollapsed2)}>
             <View className="flex flex-row justify-between">
               <Text className=" text-[#A6ADBB] font-bold">Future Value of Ordinary Annuity</Text>
@@ -64,21 +66,23 @@ const formulas = () => {
               />
             </View>
             </TouchableOpacity>
-            <View className={`flex justify-center items-center mt-4 mb-2 ${isCollapsed2 ? "hidden" : ""}`}>
+            {!isCollapsed2 && ( 
+              <View>
+            <View className="flex justify-center items-center mt-4 mb-2 ">
              <Image className="h-9 w-1/2" source={equate.fori} />
             </View>
-            <View className={`${isCollapsed2 ? "hidden" : ""}`}>
+            <View className="">
             <Text className=" text-[#A6ADBB]">Where:</Text>
               <Text className=" text-[#A6ADBB]">FV = Future Value</Text>
               <Text className=" text-[#A6ADBB]">C = Cash Flow</Text>
               <Text className=" text-[#A6ADBB]">i =  Interest Rate</Text>
               <Text className=" text-[#A6ADBB]">n = Period</Text>
-            </View>
+            </View></View>)}
           </View>
 
   {/*Present Value of Ordinary Annuity 3*/}
         
-  <View className="flex bg-[#191E24] rounded mt-1 h-auto w-full p-4">
+  <View className="flex bg-[#191E24] rounded-lg mt-1 h-auto w-full p-4">
           <TouchableOpacity onPress={() => setIsCollapsed3(!isCollapsed3)}>
             <View className="flex flex-row justify-between">
               <Text className=" text-[#A6ADBB] font-bold">Present Value of Ordinary Annuity</Text>
@@ -89,21 +93,23 @@ const formulas = () => {
               />
             </View>
             </TouchableOpacity>
-            <View className={`flex justify-center items-center mt-4 mb-2 ${isCollapsed3 ? "hidden" : ""}`}>
+            {!isCollapsed3 && ( 
+              <View>
+            <View className="flex justify-center items-center mt-4 mb-2 ">
              <Image className="h-9 w-1/2" source={equate.pori} />
             </View>
-            <View className={`${isCollapsed3 ? "hidden" : ""}`}>
+            <View className="">
             <Text className=" text-[#A6ADBB]">Where:</Text>
               <Text className=" text-[#A6ADBB]">PV = Present Value</Text>
               <Text className=" text-[#A6ADBB]">C = Cash Flow</Text>
               <Text className=" text-[#A6ADBB]">i =  Interest Rate</Text>
               <Text className=" text-[#A6ADBB]">n = Period</Text>
-            </View>
+            </View></View>)}
           </View>
 
   {/*Future Value of Annuity Due 4*/}
         
-  <View className="flex bg-[#191E24] rounded mt-1 h-auto w-full p-4">
+  <View className="flex bg-[#191E24] rounded-lg mt-1 h-auto w-full p-4">
           <TouchableOpacity onPress={() => setIsCollapsed4(!isCollapsed4)}>
             <View className="flex flex-row justify-between">
               <Text className=" text-[#A6ADBB] font-bold">Future Value of Annuity Due</Text>
@@ -114,21 +120,23 @@ const formulas = () => {
               />
             </View>
             </TouchableOpacity>
-            <View className={`flex justify-center items-center mt-4 mb-2 ${isCollapsed4 ? "hidden" : ""}`}>
+            {!isCollapsed4 && ( 
+              <View>
+            <View className="flex justify-center items-center mt-4 mb-2 ">
              <Image className="h-9 w-3/4" source={equate.fdue} />
             </View>
-            <View className={`${isCollapsed4 ? "hidden" : ""}`}>
+            <View className="">
             <Text className=" text-[#A6ADBB]">Where:</Text>
               <Text className=" text-[#A6ADBB]">FV = Future Value</Text>
               <Text className=" text-[#A6ADBB]">C = Cash Flow</Text>
               <Text className=" text-[#A6ADBB]">i =  Interest Rate</Text>
               <Text className=" text-[#A6ADBB]">n = Period</Text>
-            </View>
+            </View></View>)}
           </View>
 
 {/*Present Value of Annuity Due 5*/}
         
-<View className="flex bg-[#191E24] rounded mt-1 h-auto w-full p-4">
+<View className="flex bg-[#191E24] rounded-lg mt-1 h-auto w-full p-4">
           <TouchableOpacity onPress={() => setIsCollapsed5(!isCollapsed5)}>
             <View className="flex flex-row justify-between">
               <Text className=" text-[#A6ADBB] font-bold">Present Value of Annuity Due</Text>
@@ -139,21 +147,23 @@ const formulas = () => {
               />
             </View>
             </TouchableOpacity>
-            <View className={`flex justify-center items-center mt-4 mb-2 ${isCollapsed5 ? "hidden" : ""}`}>
+            {!isCollapsed5 && (
+              <View>
+            <View className="flex justify-center items-center mt-4 mb-2 ">
              <Image className="h-9 w-3/4" source={equate.pdue} />
             </View>
-            <View className={`${isCollapsed5 ? "hidden" : ""}`}>
+            <View className="">
             <Text className=" text-[#A6ADBB]">Where:</Text>
               <Text className=" text-[#A6ADBB]">PV = Present Value</Text>
               <Text className=" text-[#A6ADBB]">C = CashFlow</Text>
               <Text className=" text-[#A6ADBB]">i =  Interest Rate</Text>
               <Text className=" text-[#A6ADBB]">n = Period</Text>
-            </View>
+            </View></View>)}
           </View>
 
           {/*Present Value of Growing Annuity 6*/}
         
-<View className="flex bg-[#191E24] rounded mt-1 h-auto w-full p-4">
+<View className="flex bg-[#191E24] rounded-lg mt-1 h-auto w-full p-4">
           <TouchableOpacity onPress={() => setIsCollapsed6(!isCollapsed6)}>
             <View className="flex flex-row justify-between">
               <Text className=" text-[#A6ADBB] font-bold">Present Value of Growing Annuity</Text>
@@ -164,22 +174,24 @@ const formulas = () => {
               />
             </View>
             </TouchableOpacity>
-            <View className={`flex justify-center items-center mt-4 mb-2 ${isCollapsed6 ? "hidden" : ""}`}>
+            {!isCollapsed6 && (
+              <View>
+            <View className="flex justify-center items-center mt-4 mb-2 ">
              <Image className="h-[80px] w-[240px]" source={equate.gannuity} />
             </View>
-            <View className={`${isCollapsed6 ? "hidden" : ""}`}>
+            <View className="">
             <Text className=" text-[#A6ADBB]">Where:</Text>
               <Text className=" text-[#A6ADBB]">PV = Present Value</Text>
               <Text className=" text-[#A6ADBB]">C = CashFlow</Text>
               <Text className=" text-[#A6ADBB]">i =  Interest Rate</Text>
               <Text className=" text-[#A6ADBB]">g =  Growth Rate</Text>
               <Text className=" text-[#A6ADBB]">n = Period</Text>
-            </View>
+            </View></View>)}
           </View>
 
           {/*Effective Annual Rate 7*/}
         
-<View className="flex bg-[#191E24] rounded mt-1 h-auto w-full p-4">
+<View className="flex bg-[#191E24] rounded-lg mt-1 h-auto w-full p-4">
           <TouchableOpacity onPress={() => setIsCollapsed7(!isCollapsed7)}>
             <View className="flex flex-row justify-between">
               <Text className=" text-[#A6ADBB] font-bold">Effective Annual Rate</Text>
@@ -190,20 +202,22 @@ const formulas = () => {
               />
             </View>
             </TouchableOpacity>
-            <View className={`flex justify-center items-center mt-4 mb-2 ${isCollapsed7 ? "hidden" : ""}`}>
+            {!isCollapsed7 && ( 
+              <View>
+            <View className="flex justify-center items-center mt-4 mb-2 ">
              <Image className="h-[50px] w-[230px]" source={equate.efer} />
             </View>
-            <View className={`${isCollapsed7 ? "hidden" : ""}`}>
+            <View className="">
             <Text className=" text-[#A6ADBB]">Where:</Text>
               <Text className=" text-[#A6ADBB]">EAR = Effective Rate</Text>
               <Text className=" text-[#A6ADBB]">QR =  Quote Rate</Text>
               <Text className=" text-[#A6ADBB]">m = Compounding per Year</Text>
-            </View>
+            </View></View>)}
           </View>
 
           {/*Prepetual Investment Return 8*/}
         
-<View className="flex bg-[#191E24] rounded mt-1 h-auto w-full p-4">
+<View className="flex bg-[#191E24] rounded-lg mt-1 h-auto w-full p-4">
           <TouchableOpacity onPress={() => setIsCollapsed8(!isCollapsed8)}>
             <View className="flex flex-row justify-between">
               <Text className=" text-[#A6ADBB] font-bold">Prepetual Investment Return</Text>
@@ -214,20 +228,22 @@ const formulas = () => {
               />
             </View>
             </TouchableOpacity>
-            <View className={`flex justify-center items-center mt-4 mb-2 ${isCollapsed8 ? "hidden" : ""}`}>
+            {!isCollapsed8 && ( 
+              <View>
+            <View className="flex justify-center items-center mt-4 mb-2">
              <Image className="h-[65px] w-[120px]" source={equate.prepr} />
             </View>
-            <View className={`${isCollapsed8 ? "hidden" : ""}`}>
+            <View className="">
             <Text className=" text-[#A6ADBB]">Where:</Text>
               <Text className=" text-[#A6ADBB]">PV = Present Value</Text>
               <Text className=" text-[#A6ADBB]">C =  Cash Flow</Text>
               <Text className=" text-[#A6ADBB]">i = Interest Rate</Text>
-            </View>
+            </View></View>)}
           </View>
 
           {/*Growing Prepetual Investment Return 9*/}
         
-<View className="flex bg-[#191E24] rounded mt-1 h-auto w-full p-4">
+<View className="flex bg-[#191E24] rounded-lg mt-1 h-auto w-full p-4">
           <TouchableOpacity onPress={() => setIsCollapsed9(!isCollapsed9)}>
             <View className="flex flex-row justify-between">
               <Text className=" text-[#A6ADBB] font-bold">Growing Prepetual Investment Return</Text>
@@ -238,21 +254,23 @@ const formulas = () => {
               />
             </View>
             </TouchableOpacity>
-            <View className={`flex justify-center items-center mt-4 mb-2 ${isCollapsed9 ? "hidden" : ""}`}>
+            {!isCollapsed9 && ( 
+              <View>
+            <View className={"flex justify-center items-center mt-4 mb-2 "}>
              <Image className="h-14 w-2/5" source={equate.gprepr} />
             </View>
-            <View className={`${isCollapsed9 ? "hidden" : ""}`}>
+            <View className="">
             <Text className=" text-[#A6ADBB]">Where:</Text>
               <Text className=" text-[#A6ADBB]">PV = Present Value</Text>
               <Text className=" text-[#A6ADBB]">C =  Cash Flow</Text>
               <Text className=" text-[#A6ADBB]">i = Interest Rate</Text>
               <Text className=" text-[#A6ADBB]">g = Growth Rate</Text>
-            </View>
+            </View></View>)}
           </View>
 
           {/*Bond Value 10*/}
         
-<View className="flex bg-[#191E24] rounded mt-1 h-auto w-full p-4">
+<View className="flex bg-[#191E24] rounded-lg mt-1 h-auto w-full p-4">
           <TouchableOpacity onPress={() => setIsCollapsed10(!isCollapsed10)}>
             <View className="flex flex-row justify-between">
               <Text className=" text-[#A6ADBB] font-bold">Bond Value</Text>
@@ -263,17 +281,19 @@ const formulas = () => {
               />
             </View>
             </TouchableOpacity>
-            <View className={`flex justify-center items-center mt-4 mb-2 ${isCollapsed10 ? "hidden" : ""}`}>
+            {!isCollapsed10 && ( 
+              <View>
+            <View className="flex justify-center items-center mt-4 mb-2 ">
              <Image className="h-9 w-4/5" source={equate.bondv} />
             </View>
-            <View className={`${isCollapsed10 ? "hidden" : ""}`}>
+            <View className="">
             <Text className=" text-[#A6ADBB]">Where:</Text>
               <Text className=" text-[#A6ADBB]">BV = Bond Value</Text>
               <Text className=" text-[#A6ADBB]">FV=  Face Value</Text>
               <Text className=" text-[#A6ADBB]">C = Coupon Amount</Text>
               <Text className=" text-[#A6ADBB]">i = Yeild Rate</Text>
               <Text className=" text-[#A6ADBB]">n = Maturity Period</Text>
-            </View>
+            </View></View>)}
           </View>
      
      

@@ -83,7 +83,7 @@ const amortization = () => {
         className="flex bg-[#191E24] rounded h-auto p-4"
       >
         <View>
-          <Text className="text-[#A6ADBB] text-lg font-medium">
+          <Text className="text-[#A6ADBB] font-pilcrow text-lg font-medium">
           Amortization Calculator
           </Text>
         </View>
@@ -119,7 +119,7 @@ const amortization = () => {
               className="flex justify-center rounded items-center w-auto border border-[#383F47] pt-2 pb-2"
               onPress={handleCalculatePrincipalAmortization}
             >
-              <Text className="text-[#a6adbb]">
+              <Text className="text-[#a6adbb] font-archivo">
               Calculate Principal Amortization
               </Text>
             </TouchableOpacity>
@@ -127,7 +127,7 @@ const amortization = () => {
               className="flex justify-center rounded items-center w-auto border border-[#383F47] pt-2 pb-2"
               onPress={handleCalculatePaymentAmortization}
             >
-              <Text className="text-[#a6adbb]">
+              <Text className="text-[#a6adbb] font-archivo">
               Calculate Payment Amortization
               </Text>
             </TouchableOpacity>
@@ -143,23 +143,23 @@ const amortization = () => {
           {/* head */}
           <DataTable.Header className="w-full">
             
-              <DataTable.Cell className="px-4 py-1 w-auto"><Text className="text-[#a6adbb]">Year</Text></DataTable.Cell>
-              <DataTable.Cell className="px-4 py-1 w-auto"><Text className="text-[#a6adbb]">Beg. Balance</Text></DataTable.Cell>
-              <DataTable.Cell className="px-4 py-1 w-auto"><Text className="text-[#a6adbb]">Interest</Text></DataTable.Cell>
-              <DataTable.Cell className="px-4 py-1 w-auto"><Text className="text-[#a6adbb]">Principal</Text></DataTable.Cell>
-              <DataTable.Cell className="px-4 py-1 w-auto"><Text className="text-[#a6adbb]">Total Payment</Text></DataTable.Cell>
-              <DataTable.Cell className="px-4 py-1 w-auto"><Text className="text-[#a6adbb]">Remaining Balance</Text></DataTable.Cell>
+              <DataTable.Cell className="px-4 py-1 w-auto"><Text className="text-[#a6adbb] font-archivo">Year</Text></DataTable.Cell>
+              <DataTable.Cell className="px-4 py-1 w-auto"><Text className="text-[#a6adbb] font-archivo">Beg. Balance</Text></DataTable.Cell>
+              <DataTable.Cell className="px-4 py-1 w-auto"><Text className="text-[#a6adbb] font-archivo">Interest</Text></DataTable.Cell>
+              <DataTable.Cell className="px-4 py-1 w-auto"><Text className="text-[#a6adbb] font-archivo">Principal</Text></DataTable.Cell>
+              <DataTable.Cell className="px-4 py-1 w-auto"><Text className="text-[#a6adbb] font-archivo">Total Payment</Text></DataTable.Cell>
+              <DataTable.Cell className="px-4 py-1 w-auto"><Text className="text-[#a6adbb] font-archivo">Remaining Balance</Text></DataTable.Cell>
             
           </DataTable.Header>
          
             {principalAmortizationTable.map((row, index) => (
               <DataTable.Row className="flex justify-center items-center" key={index}>
                 <DataTable.Cell ><Text className="text-[#a6adbb]">{row.year}</Text></DataTable.Cell>
-                <DataTable.Cell ><Text className="text-[#a6adbb]">{row.begBalance.toFixed(2)}</Text></DataTable.Cell>
-                <DataTable.Cell ><Text className="text-[#a6adbb]">{row.interest.toFixed(2)}</Text></DataTable.Cell>
-                <DataTable.Cell ><Text className="text-[#a6adbb]">{row.principal.toFixed(2)}</Text></DataTable.Cell>
-                <DataTable.Cell ><Text className="text-[#a6adbb]">{row.totalPayment.toFixed(2)}</Text></DataTable.Cell>
-                <DataTable.Cell ><Text className="text-[#a6adbb]">{row.remainingBalance.toFixed(2)}</Text></DataTable.Cell>
+                <DataTable.Cell ><Text className="text-[#a6adbb]">{Number(row.begBalance.toFixed(2)).toLocaleString()}</Text></DataTable.Cell>
+                <DataTable.Cell ><Text className="text-[#a6adbb]">{Number(row.interest.toFixed(2)).toLocaleString()}</Text></DataTable.Cell>
+                <DataTable.Cell ><Text className="text-[#a6adbb]">{Number(row.principal.toFixed(2)).toLocaleString()}</Text></DataTable.Cell>
+                <DataTable.Cell ><Text className="text-[#a6adbb]">{Number(row.totalPayment.toFixed(2)).toLocaleString()}</Text></DataTable.Cell>
+                <DataTable.Cell ><Text className="text-[#a6adbb]">{Number(row.remainingBalance.toFixed(2)).toLocaleString()}</Text></DataTable.Cell>
               </DataTable.Row>
             ))}
          
@@ -173,22 +173,22 @@ const amortization = () => {
           {/* head */}
           <DataTable.Header className="w-full">
             
-              <DataTable.Cell className="px-4 py-1 w-auto"><Text className="text-[#a6adbb]">Year</Text></DataTable.Cell>
-              <DataTable.Cell className="px-4 py-1 w-auto"><Text className="text-[#a6adbb]">Beg. Balance</Text></DataTable.Cell>
-              <DataTable.Cell className="px-4 py-1 w-auto"><Text className="text-[#a6adbb]">Interest</Text></DataTable.Cell>
-              <DataTable.Cell className="px-4 py-1 w-auto"><Text className="text-[#a6adbb]">Principal</Text></DataTable.Cell>
-              <DataTable.Cell className="px-4 py-1 w-auto"><Text className="text-[#a6adbb]">Total Payment</Text></DataTable.Cell>
-              <DataTable.Cell className="px-4 py-1 w-auto"><Text className="text-[#a6adbb]">Remaining Balance</Text></DataTable.Cell>
+              <DataTable.Cell className="px-4 py-1 w-auto"><Text className="text-[#a6adbb] font-archivo">Year</Text></DataTable.Cell>
+              <DataTable.Cell className="px-4 py-1 w-auto"><Text className="text-[#a6adbb] font-archivo">Beg. Balance</Text></DataTable.Cell>
+              <DataTable.Cell className="px-4 py-1 w-auto"><Text className="text-[#a6adbb] font-archivo">Interest</Text></DataTable.Cell>
+              <DataTable.Cell className="px-4 py-1 w-auto"><Text className="text-[#a6adbb] font-archivo">Principal</Text></DataTable.Cell>
+              <DataTable.Cell className="px-4 py-1 w-auto"><Text className="text-[#a6adbb] font-archivo">Total Payment</Text></DataTable.Cell>
+              <DataTable.Cell className="px-4 py-1 w-auto"><Text className="text-[#a6adbb] font-archivo">Remaining Balance</Text></DataTable.Cell>
             
           </DataTable.Header>
             {paymentAmortizationTable.map((row, index) => (
-               <DataTable.Row className="table-row" key={index}>
-               <DataTable.Cell ><Text className="text-[#a6adbb]">{row.year}</Text></DataTable.Cell>
-               <DataTable.Cell ><Text className="text-[#a6adbb]">{row.begBalance.toFixed(2)}</Text></DataTable.Cell>
-               <DataTable.Cell ><Text className="text-[#a6adbb]">{row.interest.toFixed(2)}</Text></DataTable.Cell>
-               <DataTable.Cell ><Text className="text-[#a6adbb]">{row.principal.toFixed(2)}</Text></DataTable.Cell>
-               <DataTable.Cell ><Text className="text-[#a6adbb]">{row.totalPayment.toFixed(2)}</Text></DataTable.Cell>
-               <DataTable.Cell ><Text className="text-[#a6adbb]">{row.remainingBalance.toFixed(2)}</Text></DataTable.Cell>
+               <DataTable.Row className="flex justify-center items-center" key={index}>
+              <DataTable.Cell ><Text className="text-[#a6adbb]">{row.year}</Text></DataTable.Cell>
+                <DataTable.Cell ><Text className="text-[#a6adbb]">{Number(row.begBalance.toFixed(2)).toLocaleString()}</Text></DataTable.Cell>
+                <DataTable.Cell ><Text className="text-[#a6adbb]">{Number(row.interest.toFixed(2)).toLocaleString()}</Text></DataTable.Cell>
+                <DataTable.Cell ><Text className="text-[#a6adbb]">{Number(row.principal.toFixed(2)).toLocaleString()}</Text></DataTable.Cell>
+                <DataTable.Cell ><Text className="text-[#a6adbb]">{Number(row.totalPayment.toFixed(2)).toLocaleString()}</Text></DataTable.Cell>
+                <DataTable.Cell ><Text className="text-[#a6adbb]">{Number(row.remainingBalance.toFixed(2)).toLocaleString()}</Text></DataTable.Cell>
              </DataTable.Row>
            ))}
         

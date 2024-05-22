@@ -18,7 +18,12 @@ module.exports = {
           gray: {
             100: "#CDCDE0",
           },
-        }
+        },
+        fontFamily: {
+          tanker: ["Tanker"],
+          pilcrow: ["Pilcrow"],
+          archivo: ["Archivo"],
+        },
   
     },
   },

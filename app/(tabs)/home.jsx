@@ -428,7 +428,11 @@ const home = () => {
     <SafeAreaView className="bg-[#1D232A] h-full pt-2 pr-2 pl-2">
       <ScrollView showsVerticalScrollIndicator={false} className="flex flex-col space-y-4">
 
-      <View className="flex flex-col justify-start pb-4 mt-5 items-start">
+      <View className="flex flex-col justify-center pb-2 mt-4 items-center">
+        <Text className="text-3xl text-[#A6ADBB] font-tanker">TVM Finance</Text>
+      </View>
+
+      <View className="flex flex-col justify-start pb-4 mt-4 items-start">
         <Text className="text-md font-bold text-[#A6ADBB]">Instructions</Text>
         <Text className="text-[#A6ADBB]">
           Just enter known values and left the unknown value empty and Click
@@ -622,7 +626,7 @@ const home = () => {
           onPress={() => setIsCollapsed4(!isCollapsed4)}
         >
             <View className="flex flex-row justify-between">
-              <Text className=" text-[#A6ADBB] font-bold">future Value Of Annuity Due</Text>
+              <Text className=" text-[#A6ADBB] font-bold">Future Value Of Annuity Due</Text>
               <Image
                 source={!isCollapsed4 ? icons.darrow : icons.rarrow}
                 resizeMode="contain"

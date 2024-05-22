@@ -101,19 +101,20 @@ const about = () => {
           onPress={checkUpdates}
         >
           
-          <Text className=" text-[#A6ADBB]">Check for updates</Text>
+          <Text className=" text-[#A6ADBB] font-archivo">Check for updates</Text>
         </TouchableOpacity>
-        <Text className="font-medium text-[#A6ADBB] font-tanker text-2xl mb-1">
+        <View className="flex flex-col pt-4">
+        <Text className="font-medium text-[#A6ADBB] font-tanker text-xl mb-1">
           Developer Profile
         </Text>
-        <Text className="font-medium text-lg text-[#A6ADBB] font-archivo">
+        <Text className="font-medium text-sm text-[#A6ADBB] font-archivo">
           I'm <Text className="font-tanker text-yellow-500">Mustafa Khan</Text>,
           a developer with a strong background in Economics and Finance from NED
           University. My passion for coding complements my expertise, allowing
           me to create tailored solutions for finance websites. Proficient in
           React, NextJS, Dart, React Native, JavaScript, and SQL.
         </Text>
-        <Text className="font-medium text-[#A6ADBB] text-lg font-archivo">
+        <Text className="font-medium text-[#A6ADBB] text-sm font-archivo">
           With a passion for continuous learning and staying updated with the
           latest developments in both finance and technology, I am dedicated to
           staying at the forefront of innovation and driving success for your
@@ -121,71 +122,60 @@ const about = () => {
           empowers users to make informed financial decisions and achieve their
           goals with confidence.
         </Text>
+        </View>
       </View>
       </PaperProvider>
       <View className="grid sm:grid-cols-6 grid-cols-1 gap-2">
         <TouchableOpacity
           className="flex flex-row justify-center rounded items-center w-auto border border-[#383F47] pt-2 pb-2"
           onPress={() => { Linking.openURL('https://github.com/mustafakhanneo')}}
-          target="_blank"
-          rel="noopener noreferrer"
         >
           <Image className="w-[24px] h-[24px]" source={icons.github} />
-          <Text className=" text-[#A6ADBB]">Mustafa Khan</Text>
+          <Text className=" text-[#A6ADBB]"> Mustafa Khan</Text>
           
         </TouchableOpacity>
         <TouchableOpacity
           className="flex flex-row justify-center rounded items-center w-auto border border-[#383F47] pt-2 pb-2"
           onPress={() => { Linking.openURL('https://linkedin.com/in/mustafakhanneo')}}
-          target="_blank"
-          rel="noopener noreferrer"
         >
           <Image className="w-[24px] h-[24px]" source={icons.linkedin} />
-          <Text className=" text-[#A6ADBB]">Mustafa Khan</Text>
+          <Text className=" text-[#A6ADBB]"> Mustafa Khan</Text>
         </TouchableOpacity>
         <TouchableOpacity
           className="flex flex-row justify-center rounded items-center w-auto border border-[#383F47] pt-2 pb-2"
           onPress={() => { Linking.openURL('https://x.com/mustafakhanneo')}}
-          target="_blank"
-          rel="noopener noreferrer"
         >
           <Image className="w-[24px] h-[24px]" source={icons.x} />
-          <Text className=" text-[#A6ADBB]">Mustafa Khan</Text>
+          <Text className=" text-[#A6ADBB]"> Mustafa Khan</Text>
         </TouchableOpacity>
         <TouchableOpacity
           className="flex flex-row justify-center rounded items-center w-auto border border-[#383F47] pt-2 pb-2"
           onPress={() => { Linking.openURL('https://youtube.com/@mustafakhanneo')}}
-          target="_blank"
-          rel="noopener noreferrer"
         >
           <Image className="w-[24px] h-[24px]" source={icons.youtube} />
-          <Text className=" text-[#A6ADBB]">Mustafa Khan</Text>
+          <Text className=" text-[#A6ADBB]"> Mustafa Khan</Text>
         </TouchableOpacity>
         <TouchableOpacity
           className="flex flex-row justify-center rounded items-center w-auto border border-[#383F47] pt-2 pb-2"
           onPress={() => { Linking.openURL('https://instagram.com/mustafakhanneo')}}
-          target="_blank"
-          rel="noopener noreferrer"
         >
           <Image className="w-[24px] h-[24px]" source={icons.instagram} />
-          <Text className=" text-[#A6ADBB]">Mustafa Khan</Text>
+          <Text className=" text-[#A6ADBB]"> Mustafa Khan</Text>
         </TouchableOpacity>
         <TouchableOpacity
           className="flex flex-row justify-center rounded items-center w-auto border border-[#383F47] pt-2 pb-2"
           onPress={() => { Linking.openURL('https://facebook.com/mustafakhanne')}}
-          target="_blank"
-          rel="noopener noreferrer"
         >
           <Image className="w-[24px] h-[24px]" source={icons.facebook} />
-          <Text className=" text-[#A6ADBB]">Mustafa Khan</Text>
+          <Text className=" text-[#A6ADBB]"> Mustafa Khan</Text>
         </TouchableOpacity>
       </View>
       
       <View className="flex flex-col justify-start space-y-2 pt-4">
-        <Text className="font-medium text-[#A6ADBB] font-tanker text-2xl mb-2">
+        <Text className="font-medium text-[#A6ADBB] font-tanker text-xl mb-2">
           Website Limitations
         </Text>
-        <Text className="font-bold text-[#A6ADBB] text-lg font-pilcrow">
+        <Text className="font-bold text-[#A6ADBB] text-md font-pilcrow">
           TVM Finance can't calculate
         </Text>
         <View className="flex flex-col">

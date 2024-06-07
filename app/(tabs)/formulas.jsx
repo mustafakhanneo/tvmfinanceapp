@@ -3,7 +3,7 @@ import { View, Text, TouchableOpacity,
 import { SafeAreaView } from 'react-native-safe-area-context';
 import React, { useState } from 'react';
 import { StatusBar } from 'expo-status-bar';
-import { equate, icons } from '../../constants';
+import { icons } from '../../constants';
 import { MathJaxSvg } from 'react-native-mathjax-html-to-svg';
 
 

@@ -28,19 +28,19 @@ const about = () => {
       const update = await Updates.checkForUpdateAsync();
 
       if (update.isAvailable) {
-        setUpdateText("Update is Available for version 1.0.0");
+        setUpdateText("Update is Available for version 1.0.1");
         setCloseText("Later")
         setIsupdate(true);
         setModalVisible(true);
       } else {
-        setUpdateText("You are using TVM Finance Updated version 1.0.0");
+        setUpdateText("You are using TVM Finance Updated version 1.0.1");
         setCloseText("Close")
         setIsupdate(false);
         setModalVisible(true);
       }
     } catch (error) {
       // You can also add an alert() to see the error message in case of an error when fetching updates.
-      alert(`Check your internet connection: ${error}`);
+      alert(`Ops! Check your internet connection`);
     }
   }
 

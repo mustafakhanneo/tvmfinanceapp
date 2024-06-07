@@ -4,6 +4,8 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import React, { useState } from 'react';
 import { StatusBar } from 'expo-status-bar';
 import { equate, icons } from '../../constants';
+import { MathJaxSvg } from 'react-native-mathjax-html-to-svg';
+
 
 const formulas = () => {
   const [isCollapsed, setIsCollapsed] = useState(true);
@@ -42,7 +44,15 @@ const formulas = () => {
             {!isCollapsed && ( 
               <View>
             <View className="flex justify-center items-center mt-4 mb-2 ">
-             <Image className="h-4 w-1/2" source={equate.simple} />
+            <MathJaxSvg 
+  fontSize={16}
+  color="white"
+  fontCache={true}
+>
+  {`
+$$ FV = PV \\times \\left(1 + i\\right)^n$$
+  `}
+</MathJaxSvg>
             </View>
             <View className="">
             <Text className=" text-[#A6ADBB]">Where:</Text>
@@ -69,7 +79,15 @@ const formulas = () => {
             {!isCollapsed2 && ( 
               <View>
             <View className="flex justify-center items-center mt-4 mb-2 ">
-             <Image className="h-9 w-1/2" source={equate.fori} />
+            <MathJaxSvg 
+  fontSize={16}
+  color="white"
+  fontCache={true}
+>
+  {`
+$$ FV = C \\times \\biggl[\\dfrac{\\left(1 + i\\right)^n - 1}{i}\\biggr]$$
+  `}
+</MathJaxSvg>
             </View>
             <View className="">
             <Text className=" text-[#A6ADBB]">Where:</Text>
@@ -96,7 +114,15 @@ const formulas = () => {
             {!isCollapsed3 && ( 
               <View>
             <View className="flex justify-center items-center mt-4 mb-2 ">
-             <Image className="h-9 w-1/2" source={equate.pori} />
+            <MathJaxSvg 
+  fontSize={16}
+  color="white"
+  fontCache={true}
+>
+  {`
+$$ PV = C \\times \\biggl[\\dfrac{1- \\left(1 + i\\right)^{-n}}{i}\\biggr]$$
+  `}
+</MathJaxSvg>
             </View>
             <View className="">
             <Text className=" text-[#A6ADBB]">Where:</Text>
@@ -123,7 +149,15 @@ const formulas = () => {
             {!isCollapsed4 && ( 
               <View>
             <View className="flex justify-center items-center mt-4 mb-2 ">
-             <Image className="h-9 w-3/4" source={equate.fdue} />
+            <MathJaxSvg 
+  fontSize={16}
+  color="white"
+  fontCache={true}
+>
+  {`
+$$ FV = C \\times \\biggl[\\dfrac{\\left(1 + i\\right)^n -1}{i}\\biggr] \\times \\left(1 + i\\right)$$
+  `}
+</MathJaxSvg>
             </View>
             <View className="">
             <Text className=" text-[#A6ADBB]">Where:</Text>
@@ -150,7 +184,15 @@ const formulas = () => {
             {!isCollapsed5 && (
               <View>
             <View className="flex justify-center items-center mt-4 mb-2 ">
-             <Image className="h-9 w-3/4" source={equate.pdue} />
+            <MathJaxSvg 
+  fontSize={16}
+  color="white"
+  fontCache={true}
+>
+  {`
+$$ PV = C \\times \\biggl[\\dfrac{1- \\left(1 + i\\right)^{-n}}{i}\\biggr] \\times \\left(1 + i\\right)$$
+  `}
+</MathJaxSvg>
             </View>
             <View className="">
             <Text className=" text-[#A6ADBB]">Where:</Text>
@@ -177,7 +219,15 @@ const formulas = () => {
             {!isCollapsed6 && (
               <View>
             <View className="flex justify-center items-center mt-4 mb-2 ">
-             <Image className="h-[80px] w-[240px]" source={equate.gannuity} />
+            <MathJaxSvg 
+  fontSize={16}
+  color="white"
+  fontCache={true}
+>
+  {`
+$$ PV = C \\times \\Biggl[\\dfrac{1- \\left(\\dfrac{1+g}{1+i}\\right)^{n}}{i - g}\\Biggr]$$
+  `}
+</MathJaxSvg>
             </View>
             <View className="">
             <Text className=" text-[#A6ADBB]">Where:</Text>
@@ -205,7 +255,15 @@ const formulas = () => {
             {!isCollapsed7 && ( 
               <View>
             <View className="flex justify-center items-center mt-4 mb-2 ">
-             <Image className="h-[50px] w-[230px]" source={equate.efer} />
+            <MathJaxSvg 
+  fontSize={16}
+  color="white"
+  fontCache={true}
+>
+  {`
+$$ EAR = \\left(1 + \\dfrac{QR}{m}\\right)^m - 1$$
+  `}
+</MathJaxSvg>
             </View>
             <View className="">
             <Text className=" text-[#A6ADBB]">Where:</Text>
@@ -231,7 +289,15 @@ const formulas = () => {
             {!isCollapsed8 && ( 
               <View>
             <View className="flex justify-center items-center mt-4 mb-2">
-             <Image className="h-[65px] w-[120px]" source={equate.prepr} />
+            <MathJaxSvg 
+  fontSize={16}
+  color="white"
+  fontCache={true}
+>
+  {`
+$$ PV = \\dfrac{C}{i}$$
+  `}
+</MathJaxSvg>
             </View>
             <View className="">
             <Text className=" text-[#A6ADBB]">Where:</Text>
@@ -257,7 +323,15 @@ const formulas = () => {
             {!isCollapsed9 && ( 
               <View>
             <View className={"flex justify-center items-center mt-4 mb-2 "}>
-             <Image className="h-14 w-2/5" source={equate.gprepr} />
+            <MathJaxSvg 
+  fontSize={16}
+  color="white"
+  fontCache={true}
+>
+  {`
+$$ PV = \\dfrac{C}{i-g}$$
+  `}
+</MathJaxSvg>
             </View>
             <View className="">
             <Text className=" text-[#A6ADBB]">Where:</Text>
@@ -284,7 +358,15 @@ const formulas = () => {
             {!isCollapsed10 && ( 
               <View>
             <View className="flex justify-center items-center mt-4 mb-2 ">
-             <Image className="h-9 w-4/5" source={equate.bondv} />
+            <MathJaxSvg 
+  fontSize={16}
+  color="white"
+  fontCache={true}
+>
+  {`
+$$ BV = C \\times \\biggl[\\dfrac{1- \\left(1 + i\\right)^{-n}}{i}\\biggr] + \\dfrac{FV}{\\left(1 + i\\right)^n}$$
+  `}
+</MathJaxSvg>
             </View>
             <View className="">
             <Text className=" text-[#A6ADBB]">Where:</Text>
